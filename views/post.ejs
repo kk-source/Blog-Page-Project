@@ -1,0 +1,26 @@
+<%- include('./partials/header.ejs') %>
+<main class="my-4">
+  <div class="mx-auto flex flex-col w-9/12">
+    <h1 class="text-4xl text-slate-600 font-normal my-2"><%= title %></h1>
+    <p class="text-sm text-slate-500"><%= body %></p>
+  </div>
+  <div class="my-4 mx-auto flex flex-row justify-center items-center">
+    <form class="sm:mr-2" action="/delete/<%= id %>" method="get">
+      <button
+        type="submit"
+        class="my-4 p-2 bg-red-600 text-white border-2 border-slate-300 rounded-lg"
+      >
+        Delete this article
+      </button>
+    </form>
+    <form class="sm:ml-2" action="/update/<%= id %>" method="get">
+      <button
+        type="submit"
+        class="my-4 p-2 bg-green-600 text-white border-2 border-slate-300 rounded-lg"
+      >
+        Edit this article
+      </button>
+    </form>
+  </div>
+</main>
+<%- include('./partials/footer.ejs') %>

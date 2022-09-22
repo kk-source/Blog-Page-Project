@@ -1,0 +1,16 @@
+<%- include('./partials/header.ejs') %>
+<main class="my-4">
+  <div class="mx-auto flex flex-col w-9/12">
+    <h1 class="text-4xl text-slate-600 font-normal my-2">Compose</h1>
+    <form action="/compose" method="post">
+      <div class="flex flex-col">
+        <label> Title </label>
+        <input type="text" name="postTitle" class="form-control border-2 border-slate-300 rounded-sm" />
+        <label> Post </label>
+        <textarea class="border-2 border-slate-300 rounded-sm" cols="30" name="postBody" rows="5"></textarea>
+        <button type="submit" class="my-4 p-2 bg-blue-600 text-white" name="button">Publish</button>
+      </div>
+    </form>
+  </div>
+</main>
+<%- include('./partials/footer.ejs') %>
